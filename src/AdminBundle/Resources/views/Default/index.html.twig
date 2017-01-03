@@ -1,0 +1,4 @@
+Hello !
+{% if app.user and is_granted('ROLE_ADMIN') %}
+    <a href="...">Delete</a>
+{% endif %}

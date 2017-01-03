@@ -1,0 +1,17 @@
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+homepage:
+    pattern: /
+    defaults: { _controller: AdminBundle:default:index }
+
+nonexistent_route:
+    path:     /{url}
+    defaults: { _controller: AdminBundle:Default:wrongRoute}
+    requirements:
+        url: ".+"
